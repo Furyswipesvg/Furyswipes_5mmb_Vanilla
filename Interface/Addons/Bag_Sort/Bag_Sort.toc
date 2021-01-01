@@ -1,0 +1,19 @@
+## Interface: 11200
+## Title: Bag Sort
+## Notes: Sorts the contents of your bags.
+## X-Curse-Packaged-Version: 5.0.4
+## X-Curse-Project-Name: Bag Sort
+## X-Curse-Project-ID: bag-sort
+## X-Curse-Repository-ID: wow/bag-sort/mainline
+
+## Author: adjo
+## Version: 5.0.4
+## X-Date: 2012-09-10T08:49:58Z
+## X-Revision: 18
+## X-Website: http://wow.curseforge.com/addons/bag-sort/
+## X-Feedback: http://wow.curseforge.com/addons/bag-sort/tickets/
+
+## OptionalDeps:
+## SavedVariables:
+## Dependencies: 
+Bag_Sort.xml

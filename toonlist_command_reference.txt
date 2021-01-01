@@ -1,0 +1,225 @@
+# TOONLIST COMMAND REFERENCE
+# STOP: # <=== THIS IS A HASHTAG. 
+#   A hashtag as the first character of a line MAKES IT A COMMENT.
+#   THAT MEANS INVISIBLE AND UNUSED.
+#   YOU DO NOT USE HASHTAGS IN YOUR TOONLIST.TXT ON YOUR LINES.
+#
+#   In the sample toonlist.txt I give you, I have everything commented out.
+#   YOU need to change and uncomment lines you want to use.
+#
+#
+# NOTE: Except for passwords, capitalization DOES NOT MATTER HERE
+#
+# Format is <command> <command arguments>
+# Elements with spaces in the name must always be quoted
+# Some arguments are lists in quotation marks.
+# Capitalization is always ignored, EXCEPT ON AUTODELETE LIST OR itemto list!
+# Commands:
+# "#" as the first character in a line is a comment. 
+# Comment lines will be ignored. You can use comments for clarity.
+##############
+# box
+##############
+# Box makes a window line in your HKN file which will log one toon in.
+# Usage:
+# box <accountname> <password> <toonname> <role> <raidlist-cpu>
+# Example: 
+# box wowacct1 p@ssword Eversmile tank M Z J
+# Example (multi computer)
+# box wowacct1 p@ssword Eversmile tank M1 Z J1
+# box wowacct2 p@ssword Neversmile healer M2 Z J1
+#
+# Roles are:
+# tank / healer / melee / caster / hunter
+#
+# Raidlist is a single letter to assign the toon to when you open your raid
+# Can be a list of letters in quotes.
+# "m n z a l g"
+# If you are using multiple computers, add a number after raidletter to set
+# which computer the toon pops on. (no number means Local computer or cpu 1)
+# "m1 n2 z1 a l1 g1"
+#
+# What letter you assign them to will be which ctrl-alt-letter in HKN will pop
+# that raid.
+# They will appear on the monitor in order of the box commands.
+# In the example above, eversmile will appear in the alt-ctrl-M raid, the 
+# alt-ctrl-Z raid, and the alt-ctrl-J raid".
+#
+##############
+# computer
+##############
+# computer assigns ip addresses to multiple computers in your multiboxing
+# NOTE: You must have static IP addresses! Google that.
+# Usage:
+# computer <order number-- 1 is your main, 2, 3, 4 etc. are others>> <ip addr.>
+#
+# example:
+# computer 1 192.168.0.11
+# computer 2 192.168.0.33
+#
+############# 
+# raidname <unique name no spaces> 
+##############
+# This command allows you to set a customized name for your multibox group
+# which is useful for multiboxing with other multiboxers! 
+# they should be different names from each other to prevent your 5mmb from 
+# interfering with their 5mmb.
+# Example: raidname toddsraid
+# 
+############# 
+# bombfollow <toonname>
+##############
+# This command sets who the raid will run to when they have the bomb in the
+# geddon fight.
+#
+############# 
+# gazefollow <toonname>
+##############
+# This command sets who the raid will run to when they have Threatening Gaze
+# in the mandokir fight.
+#
+############# 
+# dedicated_healers <even list of tank healer tank healer pairs>:
+##############
+# WARNING: ADVANCED USERS ONLY. This sets a list of healer-tank pairs. The
+# healer will then ONLY heal (and follow! that tank). He will emergency heal
+# himself, but that's it.
+#
+# Example: dedicated_healers cuppycake avindra enticer zumwalt komal cashme
+# 
+# In the above example cuppycake, enticer and komal are tanks.
+# Avindra, zumwalt, and cashme are healers.
+# ONLY WORKS IN MC OR ON ANUBESATH SENTINAL PULLS OR ON SARTURA
+#
+# You can have multiple dedicated healers lines. Only the last one will stick.
+# They will NOT combine.
+# This is so you can save DH combos and reload them quickly
+############# 
+# goldto <toonname>
+##############
+# This command, when used with autotrade, keeps this guy with all the gold
+# and the other toons in raid with 25G ea.
+#
+############# 
+# boeto <list of toon names>
+##############
+#
+# These guys will get handed all the BOEs you pick up. Can be one toon.
+#
+############# 
+# itemto <Item name> <list of toon names>
+##############
+#
+# These guys will collect items of that name:
+# example:
+# itemname "Core of Earth" cuppycake avindra
+# 
+# NOTE for items with spaces in the name you must use quotes!
+# The above example will have cuppycake and avindra splitting all the 
+# core of earths the raid gets.
+# Works for exact name or partial name!
+# "Idol of" will sort everthing with that name into their bags.
+# "Bijou" will give that guy all bijous
+#
+#############
+# maxheal <druid maxrank> <priest maxrank> <shaman maxrank> <paladin maxrank>
+##############
+#
+# These are the max ranks of spell heals these classes will do. They should
+# simply be a list of numbers:
+# example maxheal 4 2 5 4  (this is also default)
+#
+#############
+# dontflashframe
+##############
+#
+# if you put this command in, you won't get the flashing borders around your
+# screen
+#
+#############
+# dontsoulstone
+##############
+#
+# if you put this command in, you won't soulstone rezzers
+#
+#############
+# dontautotrade
+##############
+#
+# if you put this command in, you won't autotrade items
+#############
+# dontautodelete
+##############
+#
+# if you put this command in, you won't autodelete items on 1
+# You won't autodelete ANYWAY unless you add some items to delete
+# with the autodelete command.
+#
+############
+# dontbuystacks
+##############
+#
+# If you put this command in, you will no longer buy stacks of
+# reagents/ammo/petfood on ctrl-1 with a vendor open.
+############
+# autoturn
+##############
+#
+# If you put this command in, your toons will automatically turn toward your
+# raid leader if they get "target needs to be in front of you"
+#
+############
+# clearcastmissiles
+##############
+#
+# If you put this command in, your mages will clearcast arcane missiles
+# instead of frostbolt
+#
+############
+# warlockpet <pet>
+##############
+# This will be your default warlock pet (Imp is default)
+#
+############
+# healhellfireat <decimal>
+##############
+#
+# default .85, sets how low your locks who are hellfireing have to be to get
+# emergency heals. The default means I healers will prioritize flaming locks 
+# when they hit 85% health
+#
+###########
+# healtankat <decimal>
+##############
+# 
+# sets when tanks get emergency heals (default .5)
+#
+###########
+# healchumpat <decimal>
+##############
+#
+# sets when non-tanks get emergency heals (default .33)
+#
+###########
+# healselfat <decimal>
+##############
+#
+# sets when healers think they should heal themselfs
+# default .3
+#
+###########
+# autodelete <pairs of items and numbers>
+##############
+#
+# Items with spaces in names must be in quotes.
+# number is number of stacks to KEEP
+#
+# example
+# autodelete "Lifeless Skull" 0 "Twilight Cultist Robe" 6 
+# 
+# You may have as many autodelete lines as you like. You can put many items
+# in one line or have one item per line.
+# Capitalization doesn't matter, but spaces do. Can be name or part of a name
+
+extrawait1: Time to wait after wow window is popped before renaming..ms
+extrawait2: time to wait after resizing wow window before filling in data..ms

@@ -1,0 +1,35 @@
+# This is your toonlist--it contains your info for each account.
+# Make a box command for each window you want to open.
+# FORMAT:
+# box <wowaccount> <password> <name of toon> <role> <one or more raidletters>
+#
+# role can be tank / hunter / melee / caster / healer
+# 
+# raidletters are what letters you want to pop those toons on.
+# Example, ctrl-alt-m pops all toons by default
+# if you put a t after your tank (shown), ctrl-alt-t will pop him only.
+# toons can be members of any number of raids.
+# 
+# For running multiple computers, see the video on youtube.
+box acct1 passw glarnk tank t
+box acct2 passw broink caster 
+box acct3 passw sklerg hunter 
+box acct4 passw brunko melee 
+box acct5 passw furykipes healer
+
+raidname toddsraid
+
+goldto glarnk
+
+boeto broink
+
+# extrawait1 and extrawait2 are new keywords that allow you to control the
+# timing of window opening if you find that windows aren't getting populated
+# with passwords and accounts properly or that the windows are strangely logging
+# into the wrong account. Start with the numbers shown. They are milliseconds,
+# and you can tune them for whatever works.
+# extrawait1 is a pause between opening wow and renaming the window.
+# extrawait2 is a pause after the window is renamed but before trying to
+insert password/account
+extrawait1 300
+extrawait2 1000
